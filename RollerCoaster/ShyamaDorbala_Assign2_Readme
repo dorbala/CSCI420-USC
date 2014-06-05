@@ -1,0 +1,67 @@
+  CSCI 420 Assign2: Rendering a Roller Coaster using Catmull-Rom Splines
+
+  Personal Info
+  -----------
+
+	Shyama Dorbala
+	USC# 6120-0631-99
+	dorbala[at]usc[dot]edu
+
+
+  Files Required
+  -----------
+	
+	Text files:
+	ShyamaDorbala_Assign2.cpp
+	ShyamaDorbala_Assign2_Readme
+	
+	Image files:
+	Please make sure all the texture image files from the compressed file are extracted into the same directory, namely:
+	negxMed.jpg
+	negyMed.jpg
+	negzMed.jpg
+	posxMed.jpg
+	posyMed.jpg
+	poszMed.jpg
+	usc.jpg
+	texture.jpg
+
+	Specific Libraries:
+	Pic
+
+  Instructions
+  ------------------
+
+    cd ShyamaDorbala_assign2/
+	make
+	./ShyamaDorbala_assign2 track.txt
+
+	
+  Expected Output
+  -------------
+	
+	The Roller Coaster is functional and you move along.
+	
+
+	
+  Features Incorporated
+  -------------
+	
+	1. Perspective: Two kinds of views are incorporated: 
+			a. first person: where you move along with the camera
+			b. third person: where you see a logo move along the camera
+			The selection is done using the menu function, on right click.
+
+	2. Spline Generation: Catmull Rom splines are rendered using the control matrices and calculating the interleaving points.
+
+	3. Finding u: Recursive subdivision approach was used to pick points in between two control points.
+
+	4. Speed Control: Speed control based on heights has been implemented to control how the roller coaster moves.
+
+	5. Texture Maps: Sky, ground, the crossbars are texture mapped.
+
+	6. Double Rails: A two-rail track is generated using the BiNormals. The method described in the class was used to generate the normals and the binormals.
+
+	7. Rail Cross-section: Each rail is inturn, a set of cuboids.
+
+	8. Support: A naive support of a few cuboidal structures has been given to the coaster
